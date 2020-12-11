@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="./numeric.min.js"></script>
+</head>
+
+<body>
+    <div id="base-container">
+        <div id="graph-view">
+
+            <div id="matrix-view">
+                <div class="matrix-column-text">
+                    <p id="txt-matrix-0-0">1.00</p>
+                    <p id="txt-matrix-1-0">0.00</p>
+                </div>
+
+                <div class="matrix-column-text">
+                    <p id="txt-matrix-0-1">0.00</p>
+                    <p id="txt-matrix-1-1">1.00</p>
+                </div>
+
+                <div class="matrix-column-text" style="color: #eded00;">
+                    <p id="txt-input-vect-x">1.00</p>
+                    <p id="txt-input-vect-y">1.00</p>
+                </div>
+
+                <div class="matrix-column-text">
+                    <p id="txt-output-vect-x">1.00</p>
+                    <p id="txt-output-vect-y">1.00</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="time-label-container">
+            <p id="time-label">t: 0.00</p>
+        </div>
+
+        <div id="slider-container">
+            <input id="timeSlider" type="range" min="0" max="1" step="0.01" value="0">
+        </div>
+
+        <div id="menu-button"> 
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div id="menu">
+            <div>
+                <input type="checkbox" id="chkShowInOutVector" >
+                <label for="chkShowInOutVector"> Show In/Out Vector</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chkShowDeterminant" >
+                <label for="chkShowDeterminant"> Show Determinant</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chkShowEigenVectors">
+                <label for="chkShowEigenVectors"> Show Eigenvectors</label>
+            </div>
+            <div>
+                <input type="checkbox" id="chkSnapToGrid" >
+                <label for="chkSnapToGrid"> Snap to Grid</label>
+            </div>
+            
+            <div>
+                <a href="javascript:void(0)" onclick="infoPanel.style.display = 'block'; toggleMenu();">Credits</a>
+            </div>
+        </div>
+
+        <div id="info-panel">
+            <p>Inspired by <a href='https://shad.io/MatVis/' target="_blank">Linear Transformation Visualizer</a> and <br/>
+                <a href="https://www.youtube.com/channel/UCYO_jab_esuFRV4b17AJtAw" target="_blank">3Blue1Brown</a>
+            </p> 
+            <p>
+                Released under <a href="https://opensource.org/licenses/MIT" target="_blank">MIT License</a><br/>
+                Copyright (c) 2020 Myo Thant Kyaw
+            </p>
+            <button id="btn-close-info-panel" onclick="infoPanel.style.display = 'none'"> X </button>
+        </div>
+    </div>
+
+    <script>
+        var infoPanel = document.getElementById("info-panel");
+        function toggleInfoPanel(){
+            console.log("close")
+        }
+        
+    </script>
+
+    <script src="app_bundle_3d.js"></script>
+</body>
+
+</html>
